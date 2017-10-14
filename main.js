@@ -1,7 +1,7 @@
-const NumberToBreak = ['1','2','3','4'], ERROR = 'ERROR';
+var guess = ['1','2','3','4'], ERROR = 'ERROR';
 module.exports = {
   codeBreaker:function(number){
-    let resultX = '', result_ = ''; 
+    let resultX = '', result_ = '';
     if(number === undefined)
       return ERROR;
     number = number.toString();
@@ -15,8 +15,8 @@ module.exports = {
       //Validar numeros repetidos
       if(i<number.length-1 && auxNumber[i]===auxNumber[i+1])
         return ERROR;
-      if(NumberToBreak.indexOf(number[i]) !== -1) {
-        if (NumberToBreak[i] === number[i]) {
+      if(guess.indexOf(number[i]) !== -1) {
+        if (guess[i] === number[i]) {
           resultX += 'X';
         }else{
           result_ += '_';
@@ -24,5 +24,10 @@ module.exports = {
       }
     }
     return resultX+result_;
+  },
+
+  setSecret:function(numero){
+    guess = numero;
   }
+
 }
