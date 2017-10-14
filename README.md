@@ -1,4 +1,9 @@
-# TDD_empresariales
-- Camilo Perez Velez
-- Sandra Viviana Lodoño
-- Camilo Posada Angel
+# TDD APi CodeBreaker
+
+CodeBreaker:
+setSecret()
+guess()
+
+Code Breaker API:
+GET /setSecret/:Number
+GET /guess/:Number
